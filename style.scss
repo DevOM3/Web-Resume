@@ -3,23 +3,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 body {
-  background: whitesmoke;
-  height: 100vh;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+  background: grey;
   width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   display: grid;
   place-items: center;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .main {
   border-radius: 11px;
   width: 100%;
   max-width: 1000px;
-  border: 1px solid lightgrey;
+  border: 1px solid white;
   display: flex;
   background: white;
+  // box-shadow: 0px 0px 11px lightgrey;
 
   @media only screen and (max-width: 1020px) {
     flex-direction: column;
@@ -34,6 +43,7 @@ body {
   border-bottom-left-radius: 11px;
   display: flex;
   flex-direction: column;
+  border: 2px solid white;
 
   @media only screen and (max-width: 1020px) {
     border-top-left-radius: 11px;
@@ -53,8 +63,8 @@ body {
       border: 2px solid white;
       overflow: hidden;
       background: black;
-      width: 121px;
-      height: 121px;
+      width: 151px;
+      height: 151px;
 
       img {
         width: 100%;
@@ -75,6 +85,8 @@ body {
         margin-top: 21px;
         margin-bottom: 11px;
         font-size: 18px;
+        font-weight: 700;
+        color: white;
       }
       .name {
         font-size: 1.4em;
@@ -105,10 +117,7 @@ body {
         align-items: center;
         margin-bottom: 7px;
       }
-      .contact-icon {
-        color: orange;
-        margin-right: 21px;
-      }
+
       .contact-text {
         font-size: 14px;
         color: white;
@@ -116,12 +125,68 @@ body {
         a {
           color: white;
           text-decoration: none;
+          transition: all 271ms ease-in-out;
+
+          @media only screen and (min-width: 1000px) {
+            &:hover {
+              color: #45aae3;
+            }
+          }
         }
       }
-      .separator {
-        border-bottom: 0.4px solid rgb(70, 70, 70);
-        padding-bottom: 21px;
+
+      // Education
+      .education-data {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+      .duration {
+        color: orange;
+        font-size: 12px;
+        margin-right: 21px;
+      }
+      .degree {
+        font-size: 15px;
+      }
+      .location {
+        font-size: 13px;
+
+        a {
+          color: rgb(171, 171, 171);
+          text-decoration: none;
+          transition: all 271ms ease-in-out;
+
+          @media only screen and (min-width: 1000px) {
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+
+      // Interest
+      .interest-data {
+        display: flex;
+        margin-bottom: 7px;
+      }
+      .interest-text {
+        font-size: 14px;
       }
     }
   }
+}
+
+.details {
+  flex: 0.7;
+}
+
+.separator {
+  border-bottom: 0.4px solid rgb(70, 70, 70);
+  padding-bottom: 21px;
+}
+
+.icon {
+  color: orange;
+  margin-right: 21px;
 }
