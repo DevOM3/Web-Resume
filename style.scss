@@ -20,6 +20,11 @@ body {
   border: 1px solid lightgrey;
   display: flex;
   background: white;
+
+  @media only screen and (max-width: 1020px) {
+    flex-direction: column;
+    width: 95%;
+  }
 }
 
 .short-info {
@@ -29,6 +34,12 @@ body {
   border-bottom-left-radius: 11px;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 1020px) {
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 0px;
+  }
 
   .info-top {
     width: 100%;
