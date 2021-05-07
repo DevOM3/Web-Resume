@@ -103,8 +103,8 @@ body::-webkit-scrollbar {
   border: 2px solid white;
   overflow: hidden;
   background: black;
-  width: 151px;
-  height: 151px;
+  width: 124px;
+  height: 124px;
 }
 
 .short-info .info-top .image img {
@@ -331,6 +331,12 @@ body::-webkit-scrollbar {
           flex: 0.7;
 }
 
+@media only screen and (max-width: 1020px) {
+  .details {
+    padding-bottom: 24px;
+  }
+}
+
 .details .title {
   color: black;
   margin-top: 21px;
@@ -354,7 +360,8 @@ body::-webkit-scrollbar {
 }
 
 .details .profile,
-.details .experience {
+.details .experience,
+.details .skills {
   padding-left: 11px;
   padding-right: 11px;
   margin-bottom: 11px;
@@ -379,6 +386,67 @@ body::-webkit-scrollbar {
 .details .experience-data .description {
   margin: 0;
   font-size: 14px;
+}
+
+.details .skills-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 11px;
+}
+
+@media only screen and (max-width: 550px) {
+  .details .skills-data {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.details .skills-data .language {
+  width: 75px;
+}
+
+.details .skills-data .skill-span {
+  margin-left: 11px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 14px;
+  display: block;
+  border-radius: 11px;
+  width: 100%;
+  background-color: rgba(255, 166, 0, 0.479);
+}
+
+@media only screen and (max-width: 550px) {
+  .details .skills-data .skill-span {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    margin: unset;
+  }
+}
+
+.details .skills-data .skill-span .skill-level {
+  border-radius: 11px;
+  background-color: orange;
+  height: 100%;
 }
 
 .separator {
